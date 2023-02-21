@@ -9,9 +9,11 @@
 
 // TODO: Your function prototypes below
 char** split(char *str,char *delim,int* tokens);
-void FullPathGiven(char** command, int* commandTokens);
-void RunInForeground(char* command, char**argv, int argc);
-void RunInBackground(char* command, char**argv, int argc);
+void FullPathGiven(char** command, int* commandTokensLength);
+void FullPathConstruction(char **command, int *commandTokensLength);
+void RunInForeground(char* command, char**argv);
+void RunInBackground(char* command, char**argv);
 void pwd();
 void cdHome();
 void cd(char* path);
+void handleExecution(char* path, char**command,int*commandTokensLength,char lastChar);
